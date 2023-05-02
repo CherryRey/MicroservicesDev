@@ -21,10 +21,7 @@ spec:
       containers:
       - name: mongo
         image: mongo:4.2.12
-        command: ["/bin/bash", "-c"]
-        args:
-          - |
-            mongod --auth --bind_ip_all --port 27017 --dbpath /data/db --replSet rs0
+
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
           value: "cherry2023"
